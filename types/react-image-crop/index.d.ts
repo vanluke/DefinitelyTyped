@@ -1,15 +1,17 @@
-// Type definitions for react-image-crop 8.1
+// Type definitions for react-image-crop 8.4.0
 // Project: https://github.com/DominicTobias/react-image-crop
 // Definitions by: Daniela Yassuda <https://github.com/danielasy>
 //                 Elias Chaaya <https://github.com/chaaya>
 //                 Søren Englund <https://github.com/englund0110>
 //                 Jonathan Guo <https://github.com/JonathanGuo>
 //                 Lewis Monteith <https://github.com/lemonJS>
+//                 Lukasz Gonciarz <https://github.com/vanluke>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.8
+// TypeScript Version: 3.6.3
 
 import { Component, CSSProperties, ReactNode } from 'react';
 
+export = ReactCrop;
 export as namespace ReactCrop;
 
 declare namespace ReactCrop {
@@ -67,8 +69,8 @@ declare class ReactCrop extends Component<ReactCrop.ReactCropProps> {
     onImageLoad: (image: HTMLImageElement) => void;
     getCropStyle: () => CSSProperties;
     getNewSize: () => {
-        width: number,
-        height: number,
+        width: number;
+        height: number;
     };
     resolveCrop: (crop: ReactCrop.Crop, imageWidth: number, imageHeight: number) => ReactCrop.Crop;
     dragCrop: () => ReactCrop.Crop;
@@ -78,5 +80,3 @@ declare class ReactCrop extends Component<ReactCrop.ReactCropProps> {
     makeNewCrop: () => ReactCrop.Crop;
     crossOverCheck: () => void;
 }
-
-export = ReactCrop;
